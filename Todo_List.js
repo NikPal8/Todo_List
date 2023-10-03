@@ -1,22 +1,27 @@
 
 const addBtn = document.querySelector('#addBtn');
+
 const todoTaskInput = document.querySelector('#todoTaskInput');
 
 
-const task = document.querySelector('#task');
-
-const todoBody = document.querySelector('#todoBody');
-
-
+const todoTask = document.querySelector('#task');
 
 
 addBtn.addEventListener('click', function() {
-    
-    let newelement = document.createElement('li');
 
-    newelement.textContent = ""
-     
-    todoBody.appendChild(newelement);
+    let newelement = document.createElement('li'); 
+    let taskText = document.createElement('span');
+    
+    let taskTextValue = todoTask.value;
+    
+    taskText.textContent = taskTextValue;
+    
+    
+    
+    todoBody.append(newelement);
+    newelement.append(taskText);
+    
+    
 
     
 })
