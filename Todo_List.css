@@ -72,16 +72,32 @@ body {
                     padding: 0; 
                     margin: 0; 
                     list-style-type: none;
+
                     
                     
                 }
-
-                        li {/* Task to be created in JS*/
+                        /*-- li to be created in JS and appended ul*(todobody) --*/
+                        li {/*-- Then grabs the value of #task*(input box) --*/
                             background-color: white;
                             height: 10%;
                             width: 90%;
+                            border-bottom: 2px solid lightcyan;
+                            display: flex;
+                            flex-direction: row;
                             justify-content: space-between;
                             
                             
                             
+                            
+                            
                         }
+
+                            
+
+
+                            /* .deleteBtn {
+                                background-color: red;
+                                height: 100%;
+                                width: 10%;
+                                
+                            } */
