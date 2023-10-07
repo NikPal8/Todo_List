@@ -24,9 +24,9 @@ addBtn.addEventListener('click', function() {
   
   let taskText = document.createElement('p');
 
-   
+  listNumber.textContent = 0 + num + ".";
     
-    let taskTextValue = ` ${listNumber.textContent = 0 + num } . ${todoTask.value}`;
+    let taskTextValue = ` ${todoTask.value} `;
     
 
         taskText.textContent = taskTextValue; 
@@ -36,26 +36,61 @@ addBtn.addEventListener('click', function() {
         deleteItem.id = 'deleteBtn';
         deleteItem.textContent = "Delete";
         
-        
+        const editItem = document.createElement('button');
+        // editItem.id = 'editBtn';
+        editItem.textContent = "Edit";
         
         todoBody.append(newelement);
         
-        newelement.insertAdjacentElement('beforebegin', deleteItem); 
+        newelement.append(listNumber);
         newelement.append(taskText);
+
+        newelement.append(editItem);
         
         newelement.append(deleteItem);
     
+        let checkInputBox = true; 
+
+        editItem.addEventListener('click', function(event) {
+          
+          if(checkInputBox) {
+            let currentText = editItem.previousElementSibling.textContent;
+            const inputBox = document.createElement('input');
+            inputBox.id = 'inputBox';
+            editItem.before(inputBox);
+            inputBox.value = currentText;
+            inputBox.previousElementSibling.remove();
+            checkInputBox = false;
+            
+          } else {
+            let currentText = inputBox.value;
+            let newTaskText = document.createElement('p');
+            newTaskText.id = 'newTaskText';
+            newTaskText.textContent = currentText;
+            inputBox.remove();
+            editItem.before(newTaskText);
+            checkInputBox = true;
+          }
         
+
+        });
         
       
 
         deleteItem.addEventListener('click', function(){
 
-          listNumber.remove();
+         
           newelement.remove();
+          num--;
+          let allSpans = document.querySelectorAll('span');
+          console.log(allSpans)
+          let add1 = 0;
+          for (let span of allSpans) {
+            add1++;
+            span.textContent = add1 + ".";
+          }
           
-          
-        
+           
           
           
         });

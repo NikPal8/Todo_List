@@ -84,13 +84,26 @@ body {
                             border-bottom: 2px solid lightcyan;
                             display: flex;
                             flex-direction: row;
-                            justify-content: space-between;
+                            /* justify-content: space-between; */
                             align-items: center;
                             
                             
                             
                             
                             
+                        }
+
+                        span {
+                            width: 2%;
+                        }
+
+                        p {
+                            flex-grow: 1;
+                        }
+                        
+                        #inputBox {
+                            flex-grow: 1;
+                            border: none;
                         }
 
                             
@@ -104,6 +117,7 @@ body {
                                 font-size: 1rem;
                                 border-radius: 5px;
                                 border: none;
+                                /* flex-grow: 1; */
                                 
                                 
                             }
