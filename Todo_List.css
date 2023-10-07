@@ -85,6 +85,7 @@ body {
                             display: flex;
                             flex-direction: row;
                             justify-content: space-between;
+                            align-items: center;
                             
                             
                             
@@ -95,9 +96,29 @@ body {
                             
 
 
-                            /* .deleteBtn {
-                                background-color: red;
+                            #deleteBtn {
+                                background-color: rgb(114, 114, 114);
+                                color:white;
                                 height: 100%;
                                 width: 10%;
+                                font-size: 1rem;
+                                border-radius: 5px;
+                                border: none;
                                 
-                            } */
+                                
+                            }
+                                #deleteBtn:hover {
+                                    background-color: rgb(253, 68, 68);
+                                   
+                                    /* box-shadow: 0px 0 5px 5px lightgray; */
+                                    /* font-weight: bolder;
+                                    font-size: 1.05rem; */
+                                    color: white;
+                                    border: solid  rgb(123, 123, 123);
+                                    
+                                    border-radius: 5px;
+                                    transition-delay:0.05s;
+                                    
+                                }
+
+                                
